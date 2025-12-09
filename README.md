@@ -16,6 +16,19 @@ This extension analyzes your current vestide applications.
 + Calculate how many std the current 25% is away from the target 10%
 + In this case it's low
 
+## Version
+### Initial Release (v1.0)
++ Popup dashboard to analyze housing application lists.
++ Automatically separates 'Pending' and 'Processed' applications.
++ Uses Z-score probability to predict the chance of finishing in the top 20 based on current position and historical applicant counts.
++ Color-coded status (Green/Orange/Red) indicating the likelihood of success.
+
+## Guide
++ To use, visit room.vestide.nl
++ Click "My vestide"
++ Click "My applications" on the left side bar
++ Click the extension
+
 ## Test with python
 + There's a python file to test separately. Go to applied houses site, copy everything and paste to `asdf.txt`. Then run `main.py`
 + 

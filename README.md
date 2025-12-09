@@ -1,6 +1,8 @@
-# Homeless prediction
+# Homeless prediction - Vestide
 
-This analyzes your current vestide applications. Go to applied houses site, copy everything and paste to `asdf.txt`. Then run.
+This extension analyzes your current vestide applications.
+
+<img width="740" height="595" alt="image" src="https://github.com/user-attachments/assets/d9ef7e3f-fb85-40d6-b508-3d20f7d15373" />
 
 + Percentile ranking = (position/total * 100)
 + IQR outlier detection: Tukey's method (Q1 - 1.5\*IQR, Q3 + 1.5\*IQR) [1]
@@ -14,8 +16,9 @@ This analyzes your current vestide applications. Go to applied houses site, copy
 + Calculate how many std the current 25% is away from the target 10%
 + In this case it's low
 
-<!--# Disclaimer-->
-
+## Test with python
++ There's a python file to test separately. Go to applied houses site, copy everything and paste to `asdf.txt`. Then run `main.py`
++ 
 ## Reference
 [1] Tukey, J.W. (1977). Exploratory Data Analysis. Addison-Wesley
 

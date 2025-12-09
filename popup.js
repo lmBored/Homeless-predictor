@@ -98,8 +98,8 @@ function solve(d) {
 
     let s = `<div class="panel">
         <div class="stat-grid">
-            <div class="stat-box"><span class="stat-val">${d.pen.length}</span><span class="stat-lbl">Pen</span></div>
-            <div class="stat-box"><span class="stat-val">${d.pro.length}</span><span class="stat-lbl">Pro</span></div>
+            <div class="stat-box"><span class="stat-val">${d.pen.length}</span><span class="stat-lbl">Pending</span></div>
+            <div class="stat-box"><span class="stat-val">${d.pro.length}</span><span class="stat-lbl">Processed</span></div>
             <div class="stat-box"><span class="stat-val">${md.toFixed(0)}</span><span class="stat-lbl">Avg</span></div>
             <div class="stat-box"><span class="stat-val">${avg_cut}%</span><span class="stat-lbl">Cut</span></div>
         </div>

@@ -24,6 +24,9 @@ This extension analyzes your current vestide applications.
 + Color-coded status (Green/Orange/Red) indicating the likelihood of success.
 
 ## Guide
++ Visit https://rooms.vestide.nl/en/my-vestide/my-applications/ and click the extension
+
+Or:
 + To use, visit room.vestide.nl
 + Click "My vestide"
 + Click "My applications" on the left side bar

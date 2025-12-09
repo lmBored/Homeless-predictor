@@ -1,19 +1,23 @@
-document.getElementById("analyzeBtn").addEventListener("click", async () => {
-    const [t] = await browser.tabs.query({ active: true, currentWindow: true });
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const [t] = await browser.tabs.query({ active: true, currentWindow: true });
+        
+        const res = await browser.scripting.executeScript({
+            target: { tabId: t.id },
+            func: scrape
+        });
 
-    const res = await browser.scripting.executeScript({
-        target: { tabId: t.id },
-        func: scrape
-    });
+        const d = res[0].result;
+        
+        if (!d || (d.pen.length === 0 && d.pro.length === 0)) {
+            document.getElementById("results").innerHTML = "<p style='padding:10px;'>No data found.</p>";
+            return;
+        }
 
-    const d = res[0].result;
-
-    if (!d || (d.pen.length === 0 && d.pro.length === 0)) {
-        document.getElementById("results").innerHTML = "<p style='padding:10px;'>No data found.</p>";
-        return;
+        solve(d);
+    } catch (e) {
+        document.getElementById("results").innerHTML = "<p style='padding:10px; color:red'>Error: Can't read this page.</p>";
     }
-
-    solve(d);
 });
 
 function scrape() {
@@ -153,7 +157,7 @@ function solve(d) {
             let t = ok ? "In" : "Out";
 
             s += `<tr style="opacity: 0.7;">
-                <td>${x.addr}</td>
+                <td><strong>${x.addr}</strong><br><span style="font-size:10px;color:#888;">${x.sz}m&sup2;</span></td>
                 <td>${x.pos}</td>
                 <td>${x.tot}</td>
                 <td>&euro;${x.r.toFixed(0)}</td>

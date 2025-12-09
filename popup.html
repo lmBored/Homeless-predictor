@@ -24,12 +24,15 @@
         .stat-box { padding: 10px; background: #f1f1f1; border-radius: 4px; }
         .stat-val { display: block; font-size: 18px; font-weight: bold; color: #2c3e50; }
         .stat-lbl { font-size: 11px; color: #7f8c8d; text-transform: uppercase; }
+
+        .loader { color: #777; font-style: italic; padding: 10px; }
     </style>
 </head>
 <body>
     <h2>Homeless predictor</h2>
-    <button id="analyzeBtn" class="btn">Predict present state</button>
-    <div id="results"></div>
+    <div id="results">
+        <div class="loader">Scanning page...</div>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>

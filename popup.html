@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <style>
+        body { width: 700px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; background: #FFF8F8; }
+        h2 { margin-top: 0; color: #333; border-bottom: 2px solid #1B56FD; padding-bottom: 10px; }
+        .btn { padding: 10px 20px; background: #1B56FD; color: white; border: none; cursor: pointer; font-size: 14px; border-radius: 4px; font-weight: bold; }
+        .btn:hover { background: #0118D8; }
+
+        .panel { background: none; padding: 10px; border-radius: 5px; margin-bottom: 20px; margin-top: 10px; }
+        .section-header { font-weight: bold; font-size: 16px; margin: 15px 0 5px; color: #444; display: flex; justify-content: space-between; align-items: center; }
+
+        table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 5px; }
+        th, td { border-bottom: 1px solid #eee; padding: 8px; text-align: left; }
+        th { background-color: #f1f1f1; color: #555; }
+
+        .badge { padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; color: white;}
+        .chance-high { color: #27ae60; font-weight: bold; }
+        .chance-med { color: #f39c12; font-weight: bold; }
+        .chance-low { color: #c0392b; font-weight: bold; }
+
+        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center; }
+        .stat-box { padding: 10px; background: #f1f1f1; border-radius: 4px; }
+        .stat-val { display: block; font-size: 18px; font-weight: bold; color: #2c3e50; }
+        .stat-lbl { font-size: 11px; color: #7f8c8d; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <h2>Homeless predictor</h2>
+    <button id="analyzeBtn" class="btn">Predict present state</button>
+    <div id="results"></div>
+    <script src="popup.js"></script>
+</body>
+</html>

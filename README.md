@@ -2,14 +2,17 @@
 
 This analyzes your current vestide applications. Go to applied houses site, copy everything and paste to `asdf.txt`. Then run.
 
-- Percentile ranking = (position/total * 100)
-- IQR outlier detection: Tukey's method (Q1 - 1.5\*IQR, Q3 + 1.5\*IQR) [1]
-- Z-score outlier detection: Values with |Z| > 2 are potential outliers [2]
-- Pick top N things based on average percentile performance
++ Percentile ranking = (position/total * 100)
++ IQR outlier detection: Tukey's method (Q1 - 1.5\*IQR, Q3 + 1.5\*IQR) [1]
++ Z-score outlier detection: Values with |Z| > 2 are potential outliers [2]
++ Pick top N things based on average percentile performance
 
-## Next step
-
-+ [ ] FF extension
++ For pending application, use median number of total applications from processed list, and convert z-score into percentage probability where the true rank percentile is.
++ Example:
++ If pos is 5 out of 20 (top 25%), p_current = 0.25, n = 20
++ Target threshold then is 20/200 = 10%
++ Calculate how many std the current 25% is away from the target 10%
++ In this case it's low
 
 <!--# Disclaimer-->
 

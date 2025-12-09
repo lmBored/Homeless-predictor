@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Homeless predictor",
+    "version": "1.0",
+    "description": "Aanalyze chance of not being homeless.",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Homeless predictor"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "asdf@asdf.asdf"
+        }
+    }
+}
